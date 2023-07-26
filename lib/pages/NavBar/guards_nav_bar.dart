@@ -27,7 +27,7 @@ class GuardsNav extends StatelessWidget {
     return [
       // GuardsHome(userEmail: userEmail, userUID: userUID),
       GuardsHome(),
-      GetNotification(),
+      CameraPage(),
       GetProfile(),
     ];
   }
@@ -42,13 +42,13 @@ class GuardsNav extends StatelessWidget {
       ),
       PersistentBottomNavBarItem(
         icon: Icon(CupertinoIcons.bell),
-        title: ("Notification"),
+        title: ("Submit Picture"),
         activeColorPrimary: Colors.teal,
         inactiveColorPrimary: CupertinoColors.black,
       ),
       PersistentBottomNavBarItem(
         icon: Icon(CupertinoIcons.profile_circled),
-        title: ("Profile"),
+        title: ("Contact"),
         activeColorPrimary: Colors.teal,
         inactiveColorPrimary: CupertinoColors.black,
       ),

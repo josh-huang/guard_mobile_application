@@ -10,6 +10,7 @@ import 'package:concorde_app/componets/signouticon_widget.dart';
 import 'package:flutter_custom_cards/flutter_custom_cards.dart';
 import 'package:concorde_app/pages/Notification/notification.dart';
 import 'package:concorde_app/pages/Profile/profile.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../../net/flutterfire.dart';
@@ -32,6 +33,15 @@ class _GuardsHomeState extends State<GuardsHome> {
   final AuthService _auth = AuthService();
   final user = FirebaseAuth.instance.currentUser!;
   String name = 'Guards1';
+  List<LatLng> _latLngList = [
+    LatLng(13, 77.5),
+    LatLng(13.02, 77.51),
+    LatLng(13.05, 77.53),
+    LatLng(13.155, 77.54),
+    LatLng(13.159, 77.55),
+    LatLng(13.17, 77.55),
+  ];
+
 
   final List<String> time_list = [
     'Good Morning',
@@ -56,6 +66,7 @@ class _GuardsHomeState extends State<GuardsHome> {
       body: SafeArea(
         child: BGColor(
           child: Column(
+
             children: <Widget>[
               const SizedBox(height: 20.0),
               Text(

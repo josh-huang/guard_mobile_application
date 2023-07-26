@@ -20,7 +20,7 @@ class AdminNav extends StatelessWidget {
   List<Widget> _buildScreens() {
     return [
       AdminHome(),
-      GetNotification(),
+      CameraPage(),
       GetProfile(),
     ];
   }
